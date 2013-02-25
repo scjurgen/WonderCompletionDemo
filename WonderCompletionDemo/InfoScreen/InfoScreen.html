@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <style type="text/css">
+            body {font-family:"Arial, Helvetica, sans-serif"; }
+            
+            h1.small {text-align: left; font:bold 16px Helvetica, sans-serif; }
+            h1.normal {text-align: left; font:bold 20px Helvetica, sans-serif; }
+            h1.large {text-align: left; font: bold 24px Helvetica, sans-serif; }
+            
+            h3.small {text-align: left; font:italic 10px Helvetica, sans-serif;}
+            h3.normal {text-align: left; font:italic 12px Helvetica, sans-serif; }
+            h3.large {text-align: left; font:italic 14px Helvetica, sans-serif;}
+            
+            div.small {text-align: justify; font:10px Helvetica, sans-serif; }
+            div.normal {text-align: justify; font:14px Helvetica, sans-serif; }
+            div.large {text-align: justify; font:20px Helvetica, sans-serif;}
+            
+            div.cprsmall {text-align: justify; font:italic 10px Helvetica, sans-serif; }
+            div.cprnormal {text-align: justify; font:italic 12px Helvetica, sans-serif; }
+            div.cprlarge {text-align: justify; font:italic 14px Helvetica, sans-serif;}
+            
+            
+            .floatright
+            {
+                text-align: right;
+                font:italic 10px Helvetica, sans-serif;
+                float: right;
+                width: 500px;
+                margin: 5px 5px 5px 5px;
+                padding: 5px;
+                
+            }
+            
+            </style>
+        <script type="text/javascript">
+            function upSize()
+            {
+                if (document.getElementById("newstext").className == "normal")
+                {
+                    document.getElementById("newstitle").className = "large";
+                    document.getElementById("newstext").className = "large";
+                    document.getElementById("copyright").className = "cprlarge";
+                    document.getElementById("writtenby").className = "cprlarge";
+                }
+                else if (document.getElementById("newstext").className == "small")
+                {
+                    document.getElementById("newstitle").className = "normal";
+                    document.getElementById("newstext").className = "normal";
+                    document.getElementById("copyright").className = "cprnormal";
+                    document.getElementById("writtenby").className = "cprnormal";
+                }
+                else
+                {
+                    document.getElementById("newstitle").className = "large";
+                    document.getElementById("newstext").className = "large";
+                    document.getElementById("copyright").className = "cprlarge";
+                    document.getElementById("writtenby").className = "cprlarge";
+                }
+                
+            }
+            function downSize()
+            {
+                if (document.getElementById("newstext").curClass == "normal")
+                {
+                    document.getElementById("newstitle").className = "small";
+                    document.getElementById("newstext").className = "small";
+                    document.getElementById("copyright").className = "cprsmall";
+                    document.getElementById("writtenby").className = "cprsmall";
+                }
+                else if (document.getElementById("newstext").className == "large")
+                {
+                    document.getElementById("newstitle").className = "normal";
+                    document.getElementById("newstext").className = "normal";
+                    document.getElementById("copyright").className = "cprnormal";
+                    document.getElementById("writtenby").className = "cprnormal";
+                }
+                else
+                {
+                    document.getElementById("newstitle").className = "small";
+                    document.getElementById("newstext").className = "small";
+                    document.getElementById("copyright").className = "cprsmall";
+                    document.getElementById("writtenby").className = "cprsmall";
+                }
+            }
+            </script>
+    </head>
+    <body>
+
+         <div><small onclick="downSize()" style="font-size:18px">&nbsp;-A&nbsp;</small> |  <b onclick="upSize()" style="font-size:22px">&nbsp;A+&nbsp;</b>
+         </div>
+         <hr style="height:1px;border-width:0;color:#0d0d0d;background-color:#0d0d0d" />
+        <h1 id="newstitle" class="normal">Projectinfo</h1>
+        <div id="writtenby" class="cprnormal">Demo written by Jürgen Schwietering</div>
+        <div class="floatright" >
+            <img src="{photo}" width="120px" alt="image event"/><br/>Jürgen Schwietering
+        </div>
+        <div id="newstext" class="normal">
+        Some info about this project.<br/>
+            The following techniques are used (with more or less extend) inside the app.
+            <ul>
+                <li>Cellediting</li>
+                <li>Custom Cells</li>
+                <li>Core Data with preloaded set</li>
+                <li>WebViews with templates</li>
+                <li>Asynchronous upload and download (simulated on secondary thread)</li>
+                <li>Delta updates on main thread</li>
+                <li>Version check on db</li>
+                <li>Audio signalling</li>
+            </ul>
+        All development material is provided in the project, this means, PSD files, creation tools, documentation tools, logic pro project, the complete git log (it is on bitbucket.org),
+            
+            <br/>
+        </div>
+    </body>
+</html>

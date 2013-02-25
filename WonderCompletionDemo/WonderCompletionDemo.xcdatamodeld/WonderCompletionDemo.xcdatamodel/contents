@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="12C3006" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ProposedWonders" syncable="YES">
+        <attribute name="culturalValue" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="effortEstimated" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="indexWonder" optional="YES" attributeType="Integer 16" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="YourPersonalWonders" representedClassName="YourPersonalWonders" syncable="YES">
+        <attribute name="badgeUpdate" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="daysCompleted" optional="YES" attributeType="Integer 32" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <attribute name="daysToCompletion" optional="YES" attributeType="Integer 32" defaultValueString="0.0" indexed="YES" syncable="YES"/>
+        <attribute name="lastStatusUpdate" optional="YES" attributeType="Date" indexed="YES" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="userOrder" optional="YES" attributeType="Integer 32" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="wonderID" optional="YES" attributeType="Integer 64" defaultValueString="0" indexed="YES" syncable="YES"/>
+        <attribute name="wonderName" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="wonderTerminated" optional="YES" attributeType="Boolean" defaultValueString="NO" indexed="YES" syncable="YES"/>
+        <attribute name="workersAssigned" optional="YES" attributeType="Integer 32" defaultValueString="100" syncable="YES"/>
+    </entity>
+    <fetchRequest name="FetchRequest" entity="ProposedWonders" returnDistinctResults="YES"/>
+    <elements>
+        <element name="ProposedWonders" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="YourPersonalWonders" positionX="-155" positionY="75" width="128" height="195"/>
+    </elements>
+</model>

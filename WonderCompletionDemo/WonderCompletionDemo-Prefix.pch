@@ -1,0 +1,46 @@
+//
+// Prefix header for all source files of the 'WonderCompletionDemo' target in the 'WonderCompletionDemo' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_6_0
+#warning "This project uses features only available in iOS SDK 6.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <CoreData/CoreData.h>
+
+    #import "MKNetworkKit.h"
+    #import "LogToFile.h"
+
+#define JAYJAYSDEBUG 1 // DVLog: set to 0 if you need explicit information about processes time etc.
+
+
+#if JAYJAYSDEBUG  /** Jurgens NSLog on valium */
+
+#ifdef DEBUG
+#define DVLog(fmt, ...) {NSString *prt = [NSString stringWithFormat:fmt,##__VA_ARGS__]; fprintf(stderr, "%s\n", [prt UTF8String]);}
+#else
+#define DVLog(...) {}
+#endif
+#else  /** Jurgens NSLog on steroids */
+#ifdef DEBUG
+#define DVLog(fmt, ...) NSLog((fmt @"\t\t(%s@%d)"), ##__VA_ARGS__,__FUNCTION__, __LINE__);
+#else
+#define DVLog(...) {}
+#endif
+#endif
+#endif
+
+#define kWIInEditNotification @"WIInEditNotification"
+#define kWIStoppedEditNotification @"WIStoppedEditNotification"
+#define kWICompletionWithAudioNotification @"WICompletionWithAudioNotification"
+#define MAINSERVICE_URL @"http://www.nerdware.net/MiraList"
+#define MAINSERVICE_UPLOAD @"upload.php"
+#define MAINSERVICE_DOWNLOAD @"sync_dl.php"
+#define MAINSERVICE_DUMMYUSER @"JohnDoe"
+#define MAINSERVICE_IMAGEUPLOAD @"doc_upl.php"
+
